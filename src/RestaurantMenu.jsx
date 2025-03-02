@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ShimmerCard from "./ShimmerCard";
-import SVG from "./component/starSvg";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "./utils/useRestaurantMenu";
 
@@ -58,7 +57,7 @@ function RestaurantMenu() {
                   Rs
                 </p>
                 <p className="menu-rating">
-                  {SVG}
+                  🌟
                   {res?.card?.info?.ratings?.aggregatedRating?.rating || 4.8}
                 </p>
                 <p>{res?.card?.info?.description}</p>

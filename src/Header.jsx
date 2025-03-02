@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Designer from "../src/component/Designer.jpg";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "./utils/useOnlineStatus";
 
@@ -12,14 +11,12 @@ const Header = () => {
   };
 
   return (
-    <header className="header">
-      <div className="logo">
-        <img src={Designer} alt="logo" width="6.25rem" height="6.25rem" />
+    <header className="flex justify-around items-center bg-orange-500 h-14 ">
+      <div className="">
+        <p>Logo</p>
       </div>
-      <div className="curve curve-top"></div>
-      <div className="curve curve-bottom"></div>
-      <nav className="nav-items">
-        <ul>
+      <nav>
+        <ul className="flex justify-around items-center gap-4">
           <li>Online Status : {onlineStatus == true ? "🟢" : "🔴"}</li>
           <li>
             <Link to="/">Home</Link>

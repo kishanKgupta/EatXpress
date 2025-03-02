@@ -105,7 +105,7 @@ const Body = () => {
 
   return (
     <>
-      <div className="header-1">
+      <div className="bg-yellow-100">
         <h1
           className="App-header"
           style={{ fontFamily: "Playfair Display, serif" }}

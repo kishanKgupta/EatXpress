@@ -1,5 +1,5 @@
-import SVG from "./component/starSvg";
 import { CDN_url } from "./utils/constant";
+import { FaStar } from "react-icons/fa";
 
 const Card = ({ restaurant }) => {
   const { name, cuisines, avgRatingString, sla, locality, cloudinaryImageId } =
@@ -13,7 +13,7 @@ const Card = ({ restaurant }) => {
       <div className="card-info">
         <h3 className="name">{name}</h3>
         <div className="rating">
-          <span>{SVG}</span>
+          <span>{<FaStar />}</span>
           <span>{avgRatingString}</span>
         </div>
         <h4>{sla.slaString}</h4>
