@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import ShimmerCard from "./ShimmerCard";
 import { useParams } from "react-router-dom";
-import useRestaurantMenu from "./utils/useRestaurantMenu";
+import useRestaurantMenu from "../../utils/useRestaurantMenu";
 
 function RestaurantMenu() {
   const { resId } = useParams();
-  const {menuInfo,loading,error} = useRestaurantMenu(resId);
+  const { menuInfo, loading, error } = useRestaurantMenu(resId);
 
   if (loading) {
     return (
@@ -37,15 +37,15 @@ function RestaurantMenu() {
   }
 
   return (
-    <div className="menu">
-      <div className="res-data">
+    <div className="flex flex-col m-10 ">
+      <div className="border border-black p-8 text-2xl ">
         <h1>{resInfo?.name}</h1>
       </div>
-      <div className="menu-data">
-        <div>
-          <h1>---------Menu List----------</h1>
+      <div className="">
+        <div className="flex justify-center text-center text-2xl mt-6">
+          <h1>Menu List</h1>
         </div>
-        <div className="cat-1">
+        <div className="">
           <h1>{menuData?.cards[1]?.card?.card?.title}</h1>
           {menuData?.cards[1]?.card?.card?.itemCards?.map((res) => (
             <div key={res?.card?.info?.id} className="menu-card">
