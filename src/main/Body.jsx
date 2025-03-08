@@ -70,7 +70,7 @@ const Body = () => {
 
   return (
     <>
-      <div className="flex justify-evenly items-center gap-4 bg-slate-300 h-10 ml-10 mr-10 mt-4 mb-4">
+      <div className="flex justify-evenly items-center gap-2 text-xs mt-4 mb-4 sm:text-xl sm:gap-4 bg-slate-300 sm:ml-10 sm:mr-10 sm:mt-4 sm:mb-4 ">
         <button
           className="p-1"
           onClick={() => {
@@ -111,14 +111,14 @@ const Body = () => {
       </div>
 
       {/* Search box */}
-      <div className="flex justify-around items-center h-16 mb-2">
-        <div>
-          <h1 className="text-2xl mb-2">Our Top Restaurant</h1>
-          <p>Try our top recipes curated just for you.</p>
+      <div className="flex justify-around items-center m-2 gap-2">
+        <div className="m-2">
+          <h1 className="text-lg sm:text-2xl mb-2">Our Top Restaurant</h1>
+          <p className="text-xs  sm:text-lg">Try our top recipes curated just for you.</p>
         </div>
         <div className="border border-slate-600">
           <input
-            className="text-center w-36"
+            className="text-center w-36 sm:p-2"
             type="text"
             placeholder="Search Food"
             onChange={(e) => setSearchText(e.target.value)}
@@ -128,7 +128,7 @@ const Body = () => {
       </div>
 
       {/* Card Data */}
-      <div className="res-Container">
+      <div className="flex items-center justify-center flex-wrap">
         {filteredRestaurant.length > 0 ? (
           filteredRestaurant.map((res) => (
             <Link to={`/restaurant/${res.info.id}`} key={res.info.id}>

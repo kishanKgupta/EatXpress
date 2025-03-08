@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+//custom hooks
+
 const useRestaurantMenu = (resId) => {
   const [menuInfo, setMenuInfo] = useState(null);
   const [loading, setLoading] = useState(true); // Loading state
