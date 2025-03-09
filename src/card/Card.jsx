@@ -6,19 +6,26 @@ const Card = ({ restaurant }) => {
     restaurant;
 
   return (
-    <div className="card">
-      <div className="res-logo">
-        <img src={CDN_url + cloudinaryImageId} alt={`${name} logo`} />
+    <div className="flex w-36 h-64 flex-col sm:w-48 sm:h-80 sm:m-4">
+      <div className="">
+        <img
+          className="h-32 w-36 sm:h-36 sm:w-60 rounded-xl"
+          src={CDN_url + cloudinaryImageId}
+          alt={`${name} logo`}
+        />
       </div>
-      <div className="card-info">
-        <h3 className="name">{name}</h3>
-        <div className="rating">
-          <span>{<FaStar />}</span>
-          <span>{avgRatingString}</span>
+      <div className="">
+        <h3 className="text-sm font-bold sm:text-lg sm:font-semibold">{name}</h3>
+        <div className="flex justify-between p-2 text-xs gap-2 sm:text-sm">
+          <div className="flex">
+            <span className="text-green-600">{<FaStar />}</span>
+            <span>{avgRatingString}</span>
+          </div>
+          <h4>{sla.slaString}</h4>
         </div>
-        <h4>{sla.slaString}</h4>
-        <h4 className="cuisines">{cuisines.join(", ")}</h4>
-        <h4 className="area">{locality}</h4>
+
+        <h4 className="text-xs sm:text-sm">{cuisines.join(", ")}</h4>
+        <h4 className="text-sm sm:text-lg">{locality}</h4>
       </div>
     </div>
   );

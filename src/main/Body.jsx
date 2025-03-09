@@ -128,7 +128,7 @@ const Body = () => {
       </div>
 
       {/* Card Data */}
-      <div className="flex items-center justify-center flex-wrap">
+      <div className="flex justify-evenly items-center flex-wrap gap-4">
         {filteredRestaurant.length > 0 ? (
           filteredRestaurant.map((res) => (
             <Link to={`/restaurant/${res.info.id}`} key={res.info.id}>
