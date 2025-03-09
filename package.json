@@ -2,8 +2,6 @@
   "name": "foodapp",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
-  "proxy": "http://your-backend-url.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
